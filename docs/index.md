@@ -13,5 +13,3 @@ This site contains the documentation for YouZoo
 - [Contributions](https://YouZoo.github.io/group53/contributions/) - Team members and their roles and contributions.
 
 - [Feedback](https://YouZoo.github.io/group53/feedback/) - Feedback and suggestions.
-
-
