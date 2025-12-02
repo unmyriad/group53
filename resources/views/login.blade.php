@@ -8,14 +8,20 @@
 <body>
 
 <nav class="navbar">
+    <div class="logo-area">
+    <img src="youzoo.png" class="logo-img">
     <h2 class="logo">YouZoo</h2>
+   
+</div>
+
+   
     <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="#">Cart (0)</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="login.html">Login</a></li>
     </ul>
 </nav>
 
@@ -32,18 +38,18 @@
         <button onclick="loginUser()">Login</button>
 
         <p class="small-links">
-            Forgot Password? <a href="#">Reset Link</a>
+            Forgot Password? <a href="resetpassword.html">Reset Link</a>
         </p>
 
         <p class="small-links">
-            Don't have an account? <a href="#">Register Here</a>
+            Don't have an account? <a href="register.html">Register Here</a>
         </p>
     </div>
 </section>
 
 <footer>
     <div class="footer-content">
-        <p>[Logo] | Links: About | Contact | Policies</p>
+        <p>YouZoo © 2025 | About | Contact | Policies</p>
         <p>Newsletter Signup: [Email] [Subscribe]</p>
     </div>
 </footer>
