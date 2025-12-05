@@ -47,49 +47,66 @@
                 <p class="text-gray-600 dark:text-gray-400">Join YouZoo today</p>
             </div>
 
-            <form class="space-y-6">
+            <form class="space-y-6" action="{{ route('register.post') }}" method="POST">
+                @csrf
+                @if($errors->any())
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Error!</strong>
+                        <span class="block sm:inline">{{ $errors->first() }}</span>
+                    </div>
+                @endif
                 <div>
-                    <label for="fullname" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
                     <input 
                         type="text" 
-                        id="fullname" 
+                        id="name" 
+                        name="name"
+                        value="{{ old('name') }}"
+                        required
                         placeholder="Enter your name"
                         class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 transition-colors"
                     >
                 </div>
 
                 <div>
-                    <label for="regEmail" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
                     <input 
                         type="email" 
-                        id="regEmail" 
+                        id="email" 
+                        name="email"
+                        value="{{ old('email') }}"
+                        required
                         placeholder="Enter your email"
                         class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 transition-colors"
                     >
                 </div>
 
                 <div>
-                    <label for="regPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
+                    <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
                     <input 
                         type="password" 
-                        id="regPassword" 
+                        id="password" 
+                        name="password"
+                        required
                         placeholder="Create password"
                         class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 transition-colors"
                     >
                 </div>
 
                 <div>
-                    <label for="regConfirmPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Confirm Password</label>
+                    <label for="password_confirmation" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Confirm Password</label>
                     <input 
                         type="password" 
-                        id="regConfirmPassword" 
+                        id="password_confirmation" 
+                        name="password_confirmation"
+                        required
                         placeholder="Re-enter password"
                         class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 transition-colors"
                     >
                 </div>
 
                 <button 
-                    type="button"
+                    type="submit"
                     class="w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
                 >
                     Register
@@ -107,13 +124,8 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-gray-900 dark:bg-gray-950 text-white mt-16">
-    <div class="container mx-auto px-6 py-8">
-        <div class="text-center space-y-2">
-            <p class="text-gray-400">YouZoo © {{ date('Y') }} | <a href="#" class="hover:text-white transition-colors">About</a> | <a href="#" class="hover:text-white transition-colors">Contact</a> | <a href="#" class="hover:text-white transition-colors">Policies</a></p>
-        </div>
-    </div>
-</footer>
+<!-- FOOTER -->
+@include('partials.footer')
 
 </body>
 </html>
