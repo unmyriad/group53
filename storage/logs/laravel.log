@@ -23326,3 +23326,186 @@ Did you mean one of these?
 "} 
 [2026-03-15 18:32:03] local.INFO: Dispatching OutOfStock event  
 [2026-03-15 18:32:24] local.INFO: Dispatching OutOfStock event  
+[2026-03-15 20:07:06] local.INFO: Dispatching OutOfStock event  
+[2026-03-15 20:07:06] local.ERROR: Attempt to read property "value" on string {"userId":14,"exception":"[object] (ErrorException(code: 0): Attempt to read property \"value\" on string at C:/xampp/htdocs/group53final/routes/web.php:70)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(258): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError(2, 'Attempt to read...', 'C://xampp//htdocs...', 70)
+#1 C:/xampp/htdocs/group53final/routes/web.php(70): Illuminate/Foundation/Bootstrap/HandleExceptions->Illuminate/Foundation/Bootstrap/{closure}(2, 'Attempt to read...', 'C://xampp//htdocs...', 70)
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Illuminate/Routing/RouteFileRegistrar->{closure}()
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate/Routing/CallableDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(Closure))
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate/Routing/Route->runCallable()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate/Routing/Route->run()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#19 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#26 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#27 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#31 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#34 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#36 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#38 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#39 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#40 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#41 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#42 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePathEncoding->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#46 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#47 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#48 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#49 C:/xampp/htdocs/group53final/public/index.php(20): Illuminate/Foundation/Application->handleRequest(Object(Illuminate/Http/Request))
+#50 {main}
+"} 
+[2026-03-15 20:07:25] local.INFO: Dispatching OutOfStock event  
+[2026-03-15 20:08:08] local.INFO: Dispatching OutOfStock event  
+[2026-03-15 20:20:31] local.ERROR: The process "C:\Users\armaa\.config\herd-lite\bin\php.exe artisan queue:work --once "--name=default" "--queue=default" "--backoff=0" "--memory=128" "--sleep=3" "--tries=1"" exceeded the timeout of 60 seconds. {"exception":"[object] (Symfony\\Component\\Process\\Exception\\ProcessTimedOutException(code: 0): The process \"C:\\Users\\armaa\\.config\\herd-lite\\bin\\php.exe artisan queue:work --once \"--name=default\" \"--queue=default\" \"--backoff=0\" \"--memory=128\" \"--sleep=3\" \"--tries=1\"\" exceeded the timeout of 60 seconds. at C:/xampp/htdocs/group53final/vendor/symfony/process/Process.php:1196)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/symfony/process/Process.php(462): Symfony/Component/Process/Process->checkTimeout()
+#1 C:/xampp/htdocs/group53final/vendor/symfony/process/Process.php(254): Symfony/Component/Process/Process->wait()
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Queue/Listener.php(180): Symfony/Component/Process/Process->run(Object(Closure))
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Queue/Listener.php(91): Illuminate/Queue/Listener->runProcess(Object(Symfony/Component/Process/Process), '128')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Queue/Console/ListenCommand.php(74): Illuminate/Queue/Listener->listen(NULL, 'default', Object(Illuminate/Queue/ListenerOptions))
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Queue/Console/ListenCommand->handle()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#11 C:/xampp/htdocs/group53final/vendor/symfony/console/Command/Command.php(341): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#13 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(1117): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#14 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(356): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Queue/Console/ListenCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#15 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(195): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#18 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#19 {main}
+"} 
+[2026-03-15 21:18:37] local.ERROR: Command "make:table" is not defined.
+
+Did you mean one of these?
+    cache:table
+    db:table
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:config
+    make:controller
+    make:data
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view
+    notifications:table
+    queue:batches-table
+    queue:failed-table
+    queue:table
+    session:table {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:table\" is not defined.
+
+Did you mean one of these?
+    cache:table
+    db:table
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:config
+    make:controller
+    make:data
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view
+    notifications:table
+    queue:batches-table
+    queue:failed-table
+    queue:table
+    session:table at C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php:759)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(298): Symfony/Component/Console/Application->find('make:table')
+#1 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(195): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#4 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#5 {main}
+"} 
