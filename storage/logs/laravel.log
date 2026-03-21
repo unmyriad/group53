@@ -23509,3 +23509,1013 @@ Did you mean one of these?
 #4 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
 #5 {main}
 "} 
+[2026-03-19 21:37:22] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:40:14] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:41:18] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:41:29] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:41:40] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:43:59] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:44:19] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:45:34] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:46:21] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:46:28] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:46:44] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:46:55] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:47:05] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:47:19] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:47:34] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:48:20] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:49:26] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:49:37] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:49:46] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:50:28] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:51:15] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:51:24] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:51:42] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:51:49] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:52:16] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:53:59] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:54:07] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:54:28] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:55:06] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:57:07] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:57:17] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:57:57] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:58:12] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 21:58:32] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 22:00:07] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 22:00:17] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 22:04:31] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 22:04:39] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 22:06:08] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:09] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:09] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:09] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:09] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:09] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:10] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:10] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:10] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:10] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:11] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:11] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:11] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:11] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:11] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:12] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:12] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:12] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:12] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:06:12] local.ERROR: syntax error, unexpected token ";", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \";\", expecting \")\" at C:/xampp/htdocs/group53final/routes/web.php:78)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(526): Illuminate/Routing/RouteFileRegistrar->register('C://xampp//htdocs...')
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(480): Illuminate/Routing/Router->loadRoutes('C://xampp//htdocs...')
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/RouteRegistrar.php(212): Illuminate/Routing/Router->group(Array, 'C://xampp//htdocs...')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php(248): Illuminate/Routing/RouteRegistrar->group('C://xampp//htdocs...')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Configuration/ApplicationBuilder->{closure:Illuminate/Foundation/Configuration/ApplicationBuilder::buildRoutingCallback():205}()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(162): Illuminate/Container/Container->call(Object(Closure))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php(59): Illuminate/Foundation/Support/Providers/RouteServiceProvider->loadRoutes()
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Support/Providers/RouteServiceProvider->{closure:Illuminate/Foundation/Support/Providers/RouteServiceProvider::register():53}()
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(84): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Object(Closure), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Object(Closure), Array, NULL)
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php(150): Illuminate/Container/Container->call(Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1154): Illuminate/Support/ServiceProvider->callBootedCallbacks()
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate/Foundation/Application->bootProvider(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider))
+#19 [internal function]: Illuminate/Foundation/Application->{closure:Illuminate/Foundation/Application::boot():1131}(Object(Illuminate/Foundation/Support/Providers/RouteServiceProvider), 'Illuminate//Foun...')
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate/Foundation/Application->boot()
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/BootProviders->bootstrap(Object(Illuminate/Foundation/Application))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-03-19 22:12:20] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 22:12:26] local.INFO: Dispatching OutOfStock event  
+[2026-03-19 22:14:21] local.ERROR: The process "C:\Users\armaa\.config\herd-lite\bin\php.exe artisan queue:work --once "--name=default" "--queue=default" "--backoff=0" "--memory=128" "--sleep=3" "--tries=1"" exceeded the timeout of 60 seconds. {"exception":"[object] (Symfony\\Component\\Process\\Exception\\ProcessTimedOutException(code: 0): The process \"C:\\Users\\armaa\\.config\\herd-lite\\bin\\php.exe artisan queue:work --once \"--name=default\" \"--queue=default\" \"--backoff=0\" \"--memory=128\" \"--sleep=3\" \"--tries=1\"\" exceeded the timeout of 60 seconds. at C:/xampp/htdocs/group53final/vendor/symfony/process/Process.php:1196)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/symfony/process/Process.php(462): Symfony/Component/Process/Process->checkTimeout()
+#1 C:/xampp/htdocs/group53final/vendor/symfony/process/Process.php(254): Symfony/Component/Process/Process->wait()
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Queue/Listener.php(180): Symfony/Component/Process/Process->run(Object(Closure))
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Queue/Listener.php(91): Illuminate/Queue/Listener->runProcess(Object(Symfony/Component/Process/Process), '128')
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Queue/Console/ListenCommand.php(74): Illuminate/Queue/Listener->listen(NULL, 'default', Object(Illuminate/Queue/ListenerOptions))
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Queue/Console/ListenCommand->handle()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#11 C:/xampp/htdocs/group53final/vendor/symfony/console/Command/Command.php(341): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#13 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(1117): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#14 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(356): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Queue/Console/ListenCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#15 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(195): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#18 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#19 {main}
+"} 
+[2026-03-20 20:23:04] local.ERROR: Command "make:help" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:config
+    make:controller
+    make:data
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:help\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:config
+    make:controller
+    make:data
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php:759)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(298): Symfony/Component/Console/Application->find('make:help')
+#1 C:/xampp/htdocs/group53final/vendor/symfony/console/Application.php(195): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#4 C:/xampp/htdocs/group53final/artisan(16): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#5 {main}
+"} 
+[2026-03-21 12:25:32] local.INFO: Dispatching OutOfStock event  
+[2026-03-21 15:16:42] local.INFO: Dispatching OutOfStock event  
+[2026-03-21 15:16:47] local.ERROR: Undefined property: Illuminate\Database\Eloquent\Relations\BelongsTo::$name {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\BelongsTo::$name at C:/xampp/htdocs/group53final/routes/web.php:90)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(258): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError(2, 'Undefined prope...', 'C://xampp//htdocs...', 90)
+#1 C:/xampp/htdocs/group53final/routes/web.php(90): Illuminate/Foundation/Bootstrap/HandleExceptions->Illuminate/Foundation/Bootstrap/{closure}(2, 'Undefined prope...', 'C://xampp//htdocs...', 90)
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Illuminate/Routing/RouteFileRegistrar->{closure}('14')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate/Routing/CallableDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(Closure))
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate/Routing/Route->runCallable()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate/Routing/Route->run()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#19 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#26 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#27 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#31 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#34 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#36 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#38 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#39 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#40 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#41 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#42 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePathEncoding->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#46 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#47 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#48 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#49 C:/xampp/htdocs/group53final/public/index.php(20): Illuminate/Foundation/Application->handleRequest(Object(Illuminate/Http/Request))
+#50 {main}
+"} 
+[2026-03-21 15:17:42] local.ERROR: Undefined property: Illuminate\Database\Eloquent\Relations\BelongsTo::$name {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\BelongsTo::$name at C:/xampp/htdocs/group53final/routes/web.php:90)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(258): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError(2, 'Undefined prope...', 'C://xampp//htdocs...', 90)
+#1 C:/xampp/htdocs/group53final/routes/web.php(90): Illuminate/Foundation/Bootstrap/HandleExceptions->Illuminate/Foundation/Bootstrap/{closure}(2, 'Undefined prope...', 'C://xampp//htdocs...', 90)
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(39): Illuminate/Routing/RouteFileRegistrar->{closure}('14')
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Route.php(243): Illuminate/Routing/CallableDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(Closure))
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Route.php(214): Illuminate/Routing/Route->runCallable()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(822): Illuminate/Routing/Route->run()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#19 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#26 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#27 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#28 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#31 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#32 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#34 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#36 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#38 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#39 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#40 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#41 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#42 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePathEncoding->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#46 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#47 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#48 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#49 C:/xampp/htdocs/group53final/public/index.php(20): Illuminate/Foundation/Application->handleRequest(Object(Illuminate/Http/Request))
+#50 {main}
+"} 
+[2026-03-21 15:42:56] local.ERROR: Call to a member function format() on null (View: C:\xampp\htdocs\group53final\resources\views\admin\orders\index.blade.php) {"userId":14,"exception":"[object] (Illuminate\\View\\ViewException(code: 0): Call to a member function format() on null (View: C:\\xampp\\htdocs\\group53final\\resources\\views\\admin\\orders\\index.blade.php) at C:/xampp/htdocs/group53final/storage/framework/views/8cacd8b86d305ef561b10d04f84a4c3c.php:140)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Illuminate/View/Engines/CompilerEngine->handleViewException(Object(Error), 1)
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Illuminate/View/Engines/PhpEngine->evaluatePath('C://xampp//htdocs...', Array)
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate/View/Engines/CompilerEngine->get('C://xampp//htdocs...', Array)
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate/View/View->getContents()
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate/View/View->renderContents()
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate/View/View->render()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate/Http/Response->setContent(Object(Illuminate/View/View))
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate/Http/Response->__construct(Object(Illuminate/View/View), 200, Array)
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(906): Illuminate/Routing/Router::toResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Routing/Router->prepareResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#11 C:/xampp/htdocs/group53final/app/Http/Middleware/AdminWare.php(24): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): App/Http/Middleware/AdminWare->handle(Object(Illuminate/Http/Request), Object(Closure))
+#13 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(63): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#27 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#29 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#30 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#31 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#32 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#33 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#34 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#35 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#36 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#38 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#39 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#41 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#42 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#46 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#47 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#48 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#50 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#52 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePathEncoding->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#54 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#55 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#56 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#57 C:/xampp/htdocs/group53final/public/index.php(20): Illuminate/Foundation/Application->handleRequest(Object(Illuminate/Http/Request))
+#58 {main}
+
+[previous exception] [object] (Error(code: 0): Call to a member function format() on null at C:/xampp/htdocs/group53final/storage/framework/views/8cacd8b86d305ef561b10d04f84a4c3c.php:140)
+[stacktrace]
+#0 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require()
+#1 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate/Filesystem/Filesystem::Illuminate/Filesystem/{closure}()
+#2 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(57): Illuminate/Filesystem/Filesystem->getRequire('C://xampp//htdocs...', Array)
+#3 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(76): Illuminate/View/Engines/PhpEngine->evaluatePath('C://xampp//htdocs...', Array)
+#4 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate/View/Engines/CompilerEngine->get('C://xampp//htdocs...', Array)
+#5 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate/View/View->getContents()
+#6 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate/View/View->renderContents()
+#7 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Response.php(78): Illuminate/View/View->render()
+#8 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Response.php(34): Illuminate/Http/Response->setContent(Object(Illuminate/View/View))
+#9 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(939): Illuminate/Http/Response->__construct(Object(Illuminate/View/View), 200, Array)
+#10 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(906): Illuminate/Routing/Router::toResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#11 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Routing/Router->prepareResponse(Object(Illuminate/Http/Request), Object(Illuminate/View/View))
+#12 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Routing/Router->Illuminate/Routing/{closure}(Object(Illuminate/Http/Request))
+#13 C:/xampp/htdocs/group53final/app/Http/Middleware/AdminWare.php(24): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#14 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): App/Http/Middleware/AdminWare->handle(Object(Illuminate/Http/Request), Object(Closure))
+#15 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#16 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#17 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(63): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#18 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(87): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#20 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/VerifyCsrfToken->handle(Object(Illuminate/Http/Request), Object(Closure))
+#21 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(48): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#22 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/View/Middleware/ShareErrorsFromSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#23 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(120): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#24 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate/Session/Middleware/StartSession->handleStatefulRequest(Object(Illuminate/Http/Request), Object(Illuminate/Session/Store), Object(Closure))
+#25 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Session/Middleware/StartSession->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#27 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#29 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Cookie/Middleware/EncryptCookies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#30 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#31 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#32 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#33 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#34 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#35 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#36 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate/Foundation/Http/Kernel->Illuminate/Foundation/Http/{closure}(Object(Illuminate/Http/Request))
+#37 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#38 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#39 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#41 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#43 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#44 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#45 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(109): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#46 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#47 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(61): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#48 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#49 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#50 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#51 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#52 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks->handle(Object(Illuminate/Http/Request), Object(Closure))
+#53 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#54 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate/Http/Middleware/ValidatePathEncoding->handle(Object(Illuminate/Http/Request), Object(Closure))
+#55 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate/Pipeline/Pipeline->Illuminate/Pipeline/{closure}(Object(Illuminate/Http/Request))
+#56 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#57 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#58 C:/xampp/htdocs/group53final/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#59 C:/xampp/htdocs/group53final/public/index.php(20): Illuminate/Foundation/Application->handleRequest(Object(Illuminate/Http/Request))
+#60 {main}
+"} 
+[2026-03-21 16:17:07] local.INFO: Dispatching OutOfStock event  
+[2026-03-21 16:17:38] local.INFO: Dispatching OutOfStock event  
