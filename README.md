@@ -1,5 +1,9 @@
 ![](https://cs2team53.cs2410-web01pvm.aston.ac.uk/images/placeholder1.png)
 --
+<p align="center">
+  <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" />
+    <img src="https://img.shields.io/badge/php-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" />
+</p>
 # YouZoo E-Commerce Platform
 
 YouZoo is a modern, pet-focused e-commerce application built with Laravel. It connects pet owners with high-quality products for their furry, feathered, or scaled friends.
