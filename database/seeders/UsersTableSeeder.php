@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
-use App\enums\UserRole;
+use App\Enums\UserRole;
 
 /*
 @Author: Habibur Rahman <240217006@aston.ac.uk>
