@@ -31,7 +31,8 @@
             }
         }
     </script>
-    {{-- Note: @vite Bootstrap SCSS intentionally excluded — all views use Tailwind CDN only --}}
+    {{--Added back because real-time functionality is loaded in app.js and defined in the bootstrap JS file as per laravel documentation--}}
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="bg-gradient-to-br from-green-50 to-blue-50 dark:bg-[#142624] dark:bg-none min-h-screen text-gray-800 dark:text-gray-100 transition-colors duration-300">
 
