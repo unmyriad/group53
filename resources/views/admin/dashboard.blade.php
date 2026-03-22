@@ -82,7 +82,7 @@
                             <th class="pb-3 px-2">User</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                    <tbody id="transaction-body" class="divide-y divide-gray-100 dark:divide-gray-700">
                         @forelse($recentTransactions as $transaction)
                             <tr class="text-sm hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                                 <td class="py-4 px-2 text-gray-600 dark:text-gray-400">{{ $transaction->created_at->format('M d, H:i') }}</td>
@@ -244,33 +244,68 @@
         Pusher.logToConsole = true;
 
         Echo.private('stock-channel')
-            .listen('.stock_event', (e) => {
+            .listen('.stock_event', (event) => {
                 //This is a simple test case
                 //Also, do NOT forget to add the dot in front of the name of the event as defined in broadCastAs in the App/Events
 
-                document.getElementById("lowStockCount").innerHTML = e.no_of_low_stock;
-                document.getElementById("outOfStock").innerHTML = e.no_out_of_stock;
+                document.getElementById("lowStockCount").innerHTML = event.no_of_low_stock;
+                document.getElementById("outOfStock").innerHTML = event.no_out_of_stock;
 
             })
             .listen('.message_event', (e) => {
                 alert(e.message);
                 alert(e.title);
             })
-            .listen('.dashboard_event', (e) =>{
-                if(e.order_count != 0)
+            .listen('.dashboard_event', (event) =>{
+                if(event.order_count != 0)
                 {
-                    document.getElementById("orderCount").innerHTML = e.order_count;
+                    document.getElementById("orderCount").innerHTML = event.order_count;
                 }
-                if(e.user_count != 0)
+                if(event.user_count != 0)
                 {
-                    document.getElementById("userCount").innerHTML = e.user_count;
+                    document.getElementById("userCount").innerHTML = event.user_count;
                 }
-                if(e.product_count != 0)
+                if(event.product_count != 0)
                 {
-                    document.getElementById("productCount").innerHTML = e.product_count;
+                    document.getElementById("productCount").innerHTML = event.product_count;
                 }
 
-              });
+              })
+            .listen('.transaction_event', (event) =>
+            {
+                console.log('New transaction:', event.transaction);
+
+                const transaction = event.transaction;
+
+                // Creating a new row for the transaction here
+                const transactionRow = document.createElement('tr');
+                transactionRow.classList.add('text-sm', 'hover:bg-gray-50', 'dark:hover:bg-gray-800/50', 'transition-colors');
+
+                transactionRow.innerHTML = `
+            <td class="py-4 px-2 text-gray-600 dark:text-gray-400">${transaction.created_at}</td>
+            <td class="py-4 px-2 font-medium text-gray-900 dark:text-white">${transaction.product_name}</td>
+            <td class="py-4 px-2">
+                <span class="font-bold ${transaction.quantity_change > 0 ? 'text-green-600' : 'text-red-600'}">
+                    ${transaction.quantity_change > 0 ? '+' : '-'}${transaction.quantity_change}
+                </span>
+            </td>
+            <td class="py-4 px-2">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300">
+                    ${transaction.type.charAt(0).toUpperCase() + transaction.type.slice(1)}
+                </span>
+            </td>
+            <td class="py-4 px-2 text-gray-600 dark:text-gray-400">${transaction.user}</td>
+        `;
+
+                // Getting the table body and inserting the new row at the top
+                const tableBody = document.getElementById('transaction-body');
+                tableBody.prepend(transactionRow);
+
+                // If there are more than 5 rows, I'll remove the last one
+                if (tableBody.children.length > 5) {
+                    tableBody.removeChild(tableBody.lastElementChild);
+                }
+            });
 
     });
 
