@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Enums\OrderStatus;
+use App\enums\OrderStatus;
 use App\Events\DashboardEvent;
 use App\Events\StockEvent;
 use App\Models\Order;
