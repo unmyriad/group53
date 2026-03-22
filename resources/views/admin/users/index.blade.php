@@ -33,8 +33,8 @@
                     <!-- Role Filter -->
                     <select name="role" class="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500 transition-all">
                         <option value="">All Roles</option>
-                        <option value="{{ \App\enums\UserRole::Admin->value }}" {{ request('role') === \App\enums\UserRole::Admin->value ? 'selected' : '' }}>Admin</option>
-                        <option value="{{ \App\enums\UserRole::Customer->value }}" {{ request('role') === \App\enums\UserRole::Customer->value ? 'selected' : '' }}>Customer</option>
+                        <option value="{{ \App\Enums\UserRole::Admin->value }}" {{ request('role') === \App\Enums\UserRole::Admin->value ? 'selected' : '' }}>Admin</option>
+                        <option value="{{ \App\Enums\UserRole::Customer->value }}" {{ request('role') === \App\Enums\UserRole::Customer->value ? 'selected' : '' }}>Customer</option>
                     </select>
 
                     <!-- Submit Button -->
@@ -65,7 +65,7 @@
                         <td class="py-4 px-2 text-gray-600 dark:text-gray-400">{{ $user->email }}</td>
                         <td class="py-4 px-2 text-gray-600 dark:text-gray-400">{{ $user->orders_count ?? 0 }}</td>
                         <td class="py-4 px-2 text-gray-600 dark:text-gray-400">{{ $user->reviews_count ?? 0 }}</td>
-                        <td class="py-4 px-2 text-gray-600 dark:text-gray-400">{{ \App\enums\UserRole::from($user->role->value)->name }}</td>
+                        <td class="py-4 px-2 text-gray-600 dark:text-gray-400">{{ \App\Enums\UserRole::from($user->role->value)->name }}</td>
                         <td class="py-4 px-2 text-right">
                             <a href="{{ route('editUser', $user->user_id) }}" class="text-blue-600 hover:text-blue-800 transition-colors font-bold px-3 py-1 rounded border border-blue-200 dark:border-blue-900/50 hover:bg-blue-50 dark:hover:bg-blue-900/20">
                                 Edit

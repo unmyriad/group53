@@ -7,7 +7,7 @@
 namespace App\Models;
 
 
-use App\enums\OrderStatus;
+use App\Enums\OrderStatus;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;

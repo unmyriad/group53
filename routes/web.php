@@ -1,6 +1,6 @@
 <?php
 
-use App\enums\UserRole;
+use App\Enums\UserRole;
 use App\Events\StockEvent;
 use App\Events\MessageEvent;
 use App\Events\TransactionEvent;
