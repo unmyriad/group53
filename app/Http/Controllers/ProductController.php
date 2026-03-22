@@ -188,7 +188,7 @@ class ProductController extends Controller
                             'type' => 'adjustment',
                             'note' => 'Manual stock update',
                         ]);
-                      // event(new TransactionEvent($transaction->with(["user","product"])));
+                        event(new TransactionEvent(InventoryTransaction::findOrFail($transaction->transaction_id)));
                     }
                 \Log::info("we have reached the second if");
                     if($newStock == 0 && $oldStock != 0){
