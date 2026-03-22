@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\OrderStatus;
+use App\enums\OrderStatus;
 
-use App\Enums\UserRole;
+use App\enums\UserRole;
 use App\Events\DashboardEvent;
 use App\Events\MessageEvent;
 use App\Events\StockEvent;
