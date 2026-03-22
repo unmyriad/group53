@@ -84,6 +84,4 @@ To access the platform immediately for testing purposes, use the following crede
 4.  Push to the branch (`git push origin feature/AmazingFeature`).
 5.  Open a Pull Request.
 
-## License
-
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<sup><sub>This project was developed for the CS2TP Module (2025-2026) at Aston University</sub></sup>
