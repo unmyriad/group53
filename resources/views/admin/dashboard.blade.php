@@ -252,7 +252,7 @@
                 document.getElementById("outOfStock").innerHTML = event.no_out_of_stock;
 
             })
-            
+
             .listen('.dashboard_event', (event) =>{
                 if(event.order_count != 0)
                 {
