@@ -3,12 +3,15 @@
 use App\enums\UserRole;
 use App\Events\StockEvent;
 use App\Events\MessageEvent;
+use App\Events\TransactionEvent;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\OrderController;
+use App\Models\InventoryTransaction;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ContactController;
@@ -84,9 +87,22 @@ Route::get('/test-event', function () {
             "title" => "test title",
         ]
     );
-    event(new StockEvent($noOfLowStock,$noOutOfStock));
+    $transaction=InventoryTransaction::create([
+        'product_id' => 1,
+        'user_id' => 14,
+        'quantity_change' => 25,
+        'type' => 'adjustment',
+        'note' => 'Manual stock update',
+    ]);
+    event(new TransactionEvent($transaction->with(["user","product"])));
+    event(new StockEvent(1000000,$noOutOfStock));
     event(new MessageEvent($message));
-    Product::select()->update(['stock_quantity' => 10000]);
+    $event = new \App\Events\DashboardEvent();
+    $event->orderCount=1000;
+    $event->productCount=1000;
+
+    event($event);
+
     return 'Event dispatched!';
 });
 Route::get("test/route/{id}", function ($id)

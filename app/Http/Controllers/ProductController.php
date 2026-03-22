@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Events\MessageEvent;
 use App\Events\StockEvent;
+use App\Events\TransactionEvent;
 use App\Models\AdminMessage;
 use App\Models\Category;
 use App\Models\InventoryTransaction;
@@ -157,62 +158,62 @@ class ProductController extends Controller
     }
     public function update_product(Request $request, $id){
 
+
         try {
             DB::transaction(function () use ($id, $request) {
-                $product = DB::table('products')->where('product_id',"=", $id)->lockForUpdate()->first();
-                if ($product) {
-                    $request->validate([
+                $product = Product::lockForUpdate()->findOrFail($id);
+
+                    $validated = $request->validate([
                         'product_name' => 'required|string|max:150',
                         'category_id' => 'required|exists:categories,category_id',
                         'description' => 'nullable|string',
                         'price' => 'required|numeric|min:0',
-                        'stock_quantity' => 'required|integer|min:0',
+                        'stock_quantity' => 'required|int|min:0',
                         'brand' => 'nullable|string|max:100',
                         'pet_type' => 'nullable|string|max:60',
                         'image_url' => 'nullable|url',
                         'is_active' => 'boolean',
                     ]);
 
-                    $oldStock = (int)$product->stock_quantity;
-
-
-                    DB::table('products')->where('product_id', "=", $id)->update([
-                        'product_name' => $request->input('product_name'),
-                        'category_id' => $request->input('category_id'),
-                        'description' => $request->input('description'),
-                        'price' => $request->input('price'),
-                        'stock_quantity' => $request->input('stock_quantity'),
-                        'image_url' => $request->input('image_url'),
-                        'brand' => $request->input('brand'),
-                        'pet_type' => $request->input('pet_type'),
-                        'is_active' => $request->input('is_active'),
-
-
-                    ]);
+                    $oldStock = $product->stock_quantity;
                     $newStock = (int)$request->input('stock_quantity');
+
+                    $product->update($validated);
+
                     if($oldStock != $newStock){
-                        InventoryTransaction::create([
+                        $transaction=InventoryTransaction::create([
                             'product_id' => $product->product_id,
                             'user_id' => Auth::id(),
                             'quantity_change' => $newStock - $oldStock,
                             'type' => 'adjustment',
                             'note' => 'Manual stock update',
                         ]);
+                      // event(new TransactionEvent($transaction->with(["user","product"])));
                     }
-                    if($request->input("stock_quantity") <= 10 && $product->stock_quantity > 10){
+                \Log::info("we have reached the second if");
+                    if($newStock == 0 && $oldStock != 0){
+                        \Log::info("About to dispatch StockEvent");
                         $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
-                        $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
+                        $noOfLowStock = DB::table("products")->where('stock_quantity', '<=', 10)->where('stock_quantity', '>', 0)->count();
                         event(new StockEvent($noOfLowStock,$noOutOfStock));
                     }
-                    elseif($request->input("stock_quantity") > 10 && $product->stock_quantity <= 10){
+                    elseif ($newStock <= 10 && $oldStock > 10){
+                        \Log::info("About to dispatch StockEvent");
                         $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
-                        $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
+                        $noOfLowStock = DB::table("products")->where('stock_quantity', '<=', 10)->where('stock_quantity', '>', 0)->count();
+                        event(new StockEvent($noOfLowStock,$noOutOfStock));
+                    }
+                    elseif($newStock > 10 && $oldStock <= 10){
+                        \Log::info("About to dispatch StockEvent");
+                        $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
+                        $noOfLowStock = DB::table("products")->where('stock_quantity', '<=', 10)->where('stock_quantity', '>', 0)->count();
                         event(new StockEvent($noOfLowStock,$noOutOfStock));
                     }
 
 
-                } else
-                    throw new \Exception("Product does not exist");
+
+
+
             });
             return redirect()->route("admin.inventory.index")->with('success', "successfully updated product");
         } catch (\Throwable $e) {
