@@ -114,12 +114,9 @@ class OrderController extends Controller
                                //communicates the number of products that are completely out of stock to front-end channel
                                $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
                                $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
-                               $message = AdminMessage::create([
-                                   'message' => "\"".$product->product_name."\"". " with ID ".$product->product_id. " is out of stock",
-                                   'title' => "new out of stock incident"
-                               ]);
+
                                event(new StockEvent($noOfLowStock,$noOutOfStock));
-                               event(new MessageEvent($message));
+
                                $amount = $product->price * ($orderItem->quantity - $product->stock_quantity);
                                $user = User::find($order->user_id);
                                \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\RefundMail($user,$amount));
@@ -136,12 +133,13 @@ class OrderController extends Controller
                                //communicates the number of products that are completely out of stock to front-end channel
                                $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
                                $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
-                               $message = AdminMessage::create([
-                                   'message' => "\"".$product->product_name."\"". " with ID ".$product->product_id. " is out of stock",
-                                   'title' => "new out of stock incident"
-                               ]);
+
                                event(new StockEvent($noOfLowStock,$noOutOfStock));
-                               event(new MessageEvent($message));
+                               $admins = User::where("role","=",UserRole::Admin)->get();
+                               foreach ($admins as $admin) {
+                                   Mail::to($admin->email)->send(new \App\Mail\AdminNotificationEmail($product));
+                               }
+
                            }
                            elseif (($product->stock_quantity - $orderItem->quantity) > 0 && ($product->stock_quantity - $orderItem->quantity) <= 10) {
                                DB::table("products")->where("product_id", "=", $orderItem->product_id)->update([
@@ -151,12 +149,13 @@ class OrderController extends Controller
                                //the number of low stock and out of stock products
                                $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
                                $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
-                               $message = AdminMessage::create([
-                                   'message' => "\"".$product->product_name."\"". " with ID ".$product->product_id. " is low stock",
-                                   'title' => "new low stock incident"
-                               ]);
+
                                event(new StockEvent($noOfLowStock,$noOutOfStock));
-                               event(new MessageEvent($message));
+                               $admins = User::where("role","=",UserRole::Admin)->get();
+                               foreach ($admins as $admin) {
+                                   Mail::to($admin->email)->send(new \App\Mail\AdminNotificationEmail($product));
+                               }
+
                            }
                            else
                            {
