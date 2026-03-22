@@ -73,8 +73,8 @@
         </div>
 
         <!-- Quick Actions -->
-        <div class="grid grid-cols-1 {{ Auth::user()->role === \App\enums\UserRole::Admin ? 'md:grid-cols-4' : 'md:grid-cols-3' }} gap-6 mb-8">
-            @if(Auth::user()->role === \App\enums\UserRole::Admin)
+        <div class="grid grid-cols-1 {{ Auth::user()->role === \App\Enums\UserRole::Admin ? 'md:grid-cols-4' : 'md:grid-cols-3' }} gap-6 mb-8">
+            @if(Auth::user()->role === \App\Enums\UserRole::Admin)
             <a href="{{ route('admin.dashboard') }}" class="bg-white dark:bg-[#272e2d] rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700 group ring-2 ring-red-500/20">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">

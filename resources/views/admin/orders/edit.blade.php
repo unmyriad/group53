@@ -16,9 +16,9 @@
             <div class="form-group mb-6">
                 <label for="status" class="block text-gray-700 dark:text-gray-300 font-medium">Order Status:</label>
                 <select id="status" name="status" class="mt-1 p-3 w-full border rounded-lg dark:bg-[#2d3748] dark:text-white dark:border-[#4a5568]">
-                    <option value="{{ \App\enums\OrderStatus::Packed->value }}" {{ $order->status === \App\enums\OrderStatus::Packed->value ? 'selected' : '' }}>Packed</option>
-                    <option value="{{ \App\enums\OrderStatus::Shipped->value }}" {{ $order->status === \App\enums\OrderStatus::Shipped->value ? 'selected' : '' }}>Shipped</option>
-                    <option value="{{ \App\enums\OrderStatus::Delivered->value }}" {{ $order->status === \App\enums\OrderStatus::Delivered->value ? 'selected' : '' }}>Delivered</option>
+                    <option value="{{ \App\Enums\OrderStatus::Packed->value }}" {{ $order->status === \App\Enums\OrderStatus::Packed->value ? 'selected' : '' }}>Packed</option>
+                    <option value="{{ \App\Enums\OrderStatus::Shipped->value }}" {{ $order->status === \App\Enums\OrderStatus::Shipped->value ? 'selected' : '' }}>Shipped</option>
+                    <option value="{{ \App\Enums\OrderStatus::Delivered->value }}" {{ $order->status === \App\Enums\OrderStatus::Delivered->value ? 'selected' : '' }}>Delivered</option>
                 </select>
             </div>
 
