@@ -11,6 +11,7 @@ use App\Models\InventoryTransaction;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
@@ -21,7 +22,7 @@ Route::get('/', [ProductController::class, 'home'])->name('home');
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/privacy', [App\Http\Controllers\HomeController::class, 'privacy'])->name('privacy');
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','verified'])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
     // Cart Routes
@@ -115,7 +116,7 @@ Route::get("test/route/{id}", function ($id)
 
 
 //Admin routes
-Route::middleware(['auth','is_admin'])->group(function () {
+Route::middleware(['auth','is_admin','verified'])->group(function () {
     //There are all the actions for processing orders
     Route::get("/admin/orders/index",[OrderController::class, 'getAllOrders'])->name('orders.index');
     Route::post("/admin/orders/deliver_all",[OrderController::class, 'processAllShippedOrdersAsDelivered'])->name('orders.deliver_all');
@@ -133,7 +134,7 @@ Route::middleware(['auth','is_admin'])->group(function () {
     Route::put("admin/inventory/update/{id}", [ProductController::class, "update_product"])->name("updateInventory");
     Route::get("admin/messages/index", [InventoryController::class, "index"])->name("index")->name("allMessages");
 });
-Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'is_admin','verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('dashboard');
     Route::delete('/users/{user}', [App\Http\Controllers\AdminController::class, 'deleteUser'])->name('users.destroy');
     Route::resource('inventory', App\Http\Controllers\Admin\InventoryController::class);
@@ -142,7 +143,19 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::get('/reviews', [App\Http\Controllers\AdminController::class, 'reviews'])->name('reviews.index');
     Route::delete('/reviews/{review}', [App\Http\Controllers\AdminController::class, 'deleteReview'])->name('reviews.destroy');
 });
+Route::get("/email/verify", function(){
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
 
+    return redirect('/');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+Route::post('/email/verification-notification', function (Request $request) {
+    Auth::user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 require __DIR__.'/settings.php';
 
 
