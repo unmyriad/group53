@@ -94,7 +94,7 @@ Route::get('/test-event', function () {
         'type' => 'adjustment',
         'note' => 'Manual stock update',
     ]);
-    event(new TransactionEvent($transaction->with(["user","product"])));
+    event(new TransactionEvent(InventoryTransaction::findOrFail($transaction->transaction_id)));
     event(new StockEvent(1000000,$noOutOfStock));
     event(new MessageEvent($message));
     $event = new \App\Events\DashboardEvent();

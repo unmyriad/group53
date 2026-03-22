@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\OrderStatus;
 
+use App\enums\UserRole;
 use App\Events\DashboardEvent;
 use App\Events\MessageEvent;
 use App\Events\StockEvent;
@@ -20,6 +21,7 @@ use App\Models\InventoryTransaction;
 use App\Models\Product;
 use App\Models\Address;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 use Throwable;
 
@@ -121,6 +123,10 @@ class OrderController extends Controller
                                $amount = $product->price * ($orderItem->quantity - $product->stock_quantity);
                                $user = User::find($order->user_id);
                                \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\RefundMail($user,$amount));
+                               $admins = User::where("role","=",UserRole::Admin)->get();
+                               foreach ($admins as $admin) {
+                                   Mail::to($admin->email)->send(new \App\Mail\AdminNotificationEmail($product));
+                               }
 
                            }
                            elseif ($product->stock_quantity == $orderItem->quantity) {
@@ -159,26 +165,31 @@ class OrderController extends Controller
                                ]);
                            }
                         }
-                        if(($request->input("status") === OrderStatus::Delivered->value && $order->status !== OrderStatus::Delivered->value)||($request->input("status") !== OrderStatus::Delivered->value && $order->status === OrderStatus::Delivered->value)){
-                          $event = new DashboardEvent();
-                          $event->orderCount = Order::where("status","!=",OrderStatus::Delivered)->count();
-                          event($event);
-                        }
+                        $orderStatus = $order->status;
+                        $newStatus = $request->input("status");
                         DB::table("orders")->where("order_id","=",$request->input("order_id"))->update([
                             "status" => $request->input("status")
                         ]);
-
-                    }
-                    elseif($request->input("status") !== OrderStatus::Pending->value && $order->status !== OrderStatus::Pending->value)
-                    {
-                        if(($request->input("status") === OrderStatus::Delivered->value && $order->status !== OrderStatus::Delivered->value)||($request->input("status") !== OrderStatus::Delivered->value && $order->status === OrderStatus::Delivered->value)){
+                        if(($newStatus === OrderStatus::Delivered->value && $orderStatus !== OrderStatus::Delivered->value)||($newStatus !== OrderStatus::Delivered->value && $orderStatus === OrderStatus::Delivered->value)){
                             $event = new DashboardEvent();
                             $event->orderCount = Order::where("status","!=",OrderStatus::Delivered)->count();
                             event($event);
                         }
+
+                    }
+                    elseif($request->input("status") !== OrderStatus::Pending->value && $order->status !== OrderStatus::Pending->value)
+                    {
+                        $orderStatus = $order->status;
+                        $newStatus = $request->input("status");
                         DB::table("orders")->where("order_id","=",$request->input("order_id"))->update([
                             "status" => $request->input("status")
                         ]);
+                        if(($newStatus === OrderStatus::Delivered->value && $orderStatus !== OrderStatus::Delivered->value)||($newStatus !== OrderStatus::Delivered->value && $orderStatus === OrderStatus::Delivered->value)){
+                            $event = new DashboardEvent();
+                            $event->orderCount = Order::where("status","!=",OrderStatus::Delivered)->count();
+                            event($event);
+                        }
+
                     }
 
 

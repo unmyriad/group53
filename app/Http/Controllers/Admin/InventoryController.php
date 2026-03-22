@@ -71,7 +71,7 @@ class InventoryController extends Controller
             'type' => 'adjustment',
             'note' => 'Initial stock on creation',
         ]);
-        event(new TransactionEvent($transaction->with(["user","product"])));
+        event(new TransactionEvent(InventoryTransaction::findOrFail($transaction->transaction_id)));
         $event = new DashboardEvent();
         $event->productCount = Product::count();
         event($event);
