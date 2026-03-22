@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\OrderStatus;
-use App\enums\UserRole;
+use App\Enums\UserRole;
 use App\Events\DashboardEvent;
 use App\Mail\AdminCreationEmail;
 use App\Models\Order;
