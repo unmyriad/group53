@@ -32,7 +32,7 @@ it("add a product to the right users cart", function () {
 
 });
 
-// Security Testing - Authentication
+// Security Testing - Authorisation
 
 test('prevents user from deleting another users cart item', function() {
 
