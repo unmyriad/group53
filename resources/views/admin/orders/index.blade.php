@@ -22,10 +22,10 @@
 
                         <select name="status" class="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500 transition-all">
                             <option value="">All Status</option>
-                            <option value="{{ \App\enums\OrderStatus::Pending->value }}" {{ request('status') === \App\enums\OrderStatus::Pending->value ? 'selected' : '' }}>Pending</option>
-                            <option value="{{ \App\enums\OrderStatus::Packed->value }}" {{ request('status') === \App\enums\OrderStatus::Packed->value ? 'selected' : '' }}>Packed</option>
-                            <option value="{{ \App\enums\OrderStatus::Shipped->value }}" {{ request('status') === \App\enums\OrderStatus::Shipped->value ? 'selected' : '' }}>Shipped</option>
-                            <option value="{{ \App\enums\OrderStatus::Delivered->value }}" {{ request('status') === \App\enums\OrderStatus::Delivered->value ? 'selected' : '' }}>Delivered</option>
+                            <option value="{{ \App\Enums\OrderStatus::Pending->value }}" {{ request('status') === \App\Enums\OrderStatus::Pending->value ? 'selected' : '' }}>Pending</option>
+                            <option value="{{ \App\Enums\OrderStatus::Packed->value }}" {{ request('status') === \App\Enums\OrderStatus::Packed->value ? 'selected' : '' }}>Packed</option>
+                            <option value="{{ \App\Enums\OrderStatus::Shipped->value }}" {{ request('status') === \App\Enums\OrderStatus::Shipped->value ? 'selected' : '' }}>Shipped</option>
+                            <option value="{{ \App\Enums\OrderStatus::Delivered->value }}" {{ request('status') === \App\Enums\OrderStatus::Delivered->value ? 'selected' : '' }}>Delivered</option>
                         </select>
 
                         <button type="submit" class="px-4 py-2 bg-gray-800 dark:bg-gray-600 text-white rounded-lg hover:bg-gray-900 transition-colors">
