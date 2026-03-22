@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Events\DashboardEvent;
+use App\Events\TransactionEvent;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
@@ -63,13 +64,14 @@ class InventoryController extends Controller
         $product = Product::create($validated);
 
         // Log initial stock as a transaction
-        InventoryTransaction::create([
+        $transaction=InventoryTransaction::create([
             'product_id' => $product->product_id,
             'user_id' => Auth::id(),
             'quantity_change' => $product->stock_quantity,
             'type' => 'adjustment',
             'note' => 'Initial stock on creation',
         ]);
+        event(new TransactionEvent($transaction->with(["user","product"])));
         $event = new DashboardEvent();
         $event->productCount = Product::count();
         event($event);
@@ -85,36 +87,44 @@ class InventoryController extends Controller
 
     public function update(Request $request, $id)
     {
-        $product = Product::findOrFail($id);
+        try {
+            DB::transaction(function () use ($request, $id) {
 
-        $validated = $request->validate([
-            'product_name' => 'required|string|max:150',
-            'category_id' => 'required|exists:categories,category_id',
-            'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
-            'stock_quantity' => 'required|integer|min:0',
-            'brand' => 'nullable|string|max:100',
-            'pet_type' => 'nullable|string|max:60',
-            'image_url' => 'nullable|url',
-            'is_active' => 'boolean',
-        ]);
 
-        $oldStock = $product->stock_quantity;
-        $product->update($validated);
+                $product = Product::lockForUpdate()->findOrFail($id);
 
-        $newStock = (int)$request->input('stock_quantity');
+                $validated = $request->validate([
+                    'product_name' => 'required|string|max:150',
+                    'category_id' => 'required|exists:categories,category_id',
+                    'description' => 'nullable|string',
+                    'price' => 'required|numeric|min:0',
+                    'stock_quantity' => 'required|integer|min:0',
+                    'brand' => 'nullable|string|max:100',
+                    'pet_type' => 'nullable|string|max:60',
+                    'image_url' => 'nullable|url',
+                    'is_active' => 'boolean',
+                ]);
 
-        if ($oldStock !== $newStock) {
-            InventoryTransaction::create([
-                'product_id' => $product->product_id,
-                'user_id' => Auth::id(),
-                'quantity_change' => $newStock - $oldStock,
-                'type' => 'adjustment',
-                'note' => 'Manual stock update',
-            ]);
+                $oldStock = $product->stock_quantity;
+                $product->update($validated);
+
+                $newStock = (int)$request->input('stock_quantity');
+
+                if ($oldStock !== $newStock) {
+                    InventoryTransaction::create([
+                        'product_id' => $product->product_id,
+                        'user_id' => Auth::id(),
+                        'quantity_change' => $newStock - $oldStock,
+                        'type' => 'adjustment',
+                        'note' => 'Manual stock update',
+                    ]);
+                }
+            });
+            return redirect()->route('admin.inventory.index')->with('success', 'Product updated successfully.');
+        } catch (\Throwable $e) {
+return redirect()->route('admin.inventory.index')->with('error', $e->getMessage());
         }
 
-        return redirect()->route('admin.inventory.index')->with('success', 'Product updated successfully.');
     }
 
     public function destroy($id)
