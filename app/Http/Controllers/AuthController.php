@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\DashboardEvent;
 use App\Models\Order;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -30,9 +31,13 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
             'role' => 'customer',
         ]);
+        $user_model = User::findOrFail($user->user_id);
+        event(new Registered($user_model));
+
         $event = new DashboardEvent();
         $event->userCount = User::count();
         event($event);
+
         // Send Welcome Email
         try {
             \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\WelcomeMail($user));
