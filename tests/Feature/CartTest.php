@@ -13,9 +13,10 @@ it("add a product to the right users cart", function () {
     $product = Product::factory()->create();
 
     $cart = Cart::factory()->create([
-        'user_id' => $user->user_id,
+        'user_id' => $user -> user_id,
     ]);
-    
+
+    // Route to add item in user cart
     $response = $this -> actingAs($user)
         -> post(route('cart.add',[
             'product_id' => $product -> product_id, 
@@ -23,7 +24,7 @@ it("add a product to the right users cart", function () {
         ])); 
 
     // Assertions - checks if product assigned to right user
-    $response->assertRedirect();
+    $response->assertRedirect(); // should redirect user
     $this->assertDatabaseHas('cart_items',[
         'product_id' => $product -> product_id,
         'cart_id' => $cart -> cart_id
@@ -33,31 +34,27 @@ it("add a product to the right users cart", function () {
 
 // Security Testing - Authentication
 
-test('user cannot delete item of others cart', function() {
-
-    // TODO - Create two users
+test('prevents user from deleting another users cart item', function() {
 
     $user1 = User::factory()->create();
     $user2 = User::factory()->create();
 
     $cart = Cart::factory()->create([
-        'user_id' => $user1->user_id
+        'user_id' => $user1 -> user_id
     ]);
 
     $cartItem = CartItem::factory()->create([
-        'cart_id' => $cart->cart_id,
+        'cart_id' => $cart -> cart_id,
     ]);
 
     // Route to remove item in user cart
-
     $response = $this -> actingAs($user2)
         -> post(route('cart.remove',[
             'cart_item_id' => $cartItem -> cart_item_id
         ]));
 
-    // Assertion - checks that user's item still exists
-
-    $response -> assertStatus(403);
+    // Assertions - checks if user's item still exists
+    $response -> assertStatus(403); // should be forbidden
     $this->assertDatabaseHas('cart_items',[
         'cart_item_id' => $cartItem -> cart_item_id,
         'cart_id' => $cart -> cart_id
