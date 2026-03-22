@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Broadcast;
 
 Broadcast::channel('stock-channel', function (User $user) {
 
-    return $user->role->value === \App\Enums\UserRole::Admin->value;
+    return $user->role->value === \App\enums\UserRole::Admin->value;
 
 });
 

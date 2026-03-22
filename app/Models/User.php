@@ -15,7 +15,7 @@ use Illuminate\Notifications\Notifiable;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
-use App\Enums\UserRole;
+use App\enums\UserRole;
 use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
