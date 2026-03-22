@@ -165,7 +165,7 @@ class AdminController extends Controller
 
                 // Manually cascade deletions due to database restrictions
                 if (method_exists($user, 'orders')) {
-                    $orders = $user->orders()->lockForUpdate();
+                    $orders = $user->orders()->lockForUpdate()->get();
                     foreach ($orders as $order) {
                         if (method_exists($order, 'order_items')) {
                             $order->order_items()->lockForUpdate()->delete();
