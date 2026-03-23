@@ -54,7 +54,7 @@ test('prevents user from deleting another users cart item', function() {
         ]));
 
     // Assertions - checks if user's item still exists
-    $response -> assertStatus(403); // should be forbidden
+    $response -> assertForbidden(); // should be forbidden
     $this->assertDatabaseHas('cart_items',[
         'cart_item_id' => $cartItem -> cart_item_id,
         'cart_id' => $cart -> cart_id
