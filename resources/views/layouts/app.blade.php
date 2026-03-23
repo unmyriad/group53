@@ -31,7 +31,7 @@
             }
         }
     </script>
-
+   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="bg-gradient-to-br from-green-50 to-blue-50 dark:bg-[#142624] dark:bg-none min-h-screen text-gray-800 dark:text-gray-100 transition-colors duration-300">
 
