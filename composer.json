@@ -10,13 +10,14 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "ext-curl": "*",
+        "ext-pdo": "*",
+        "laravel/cashier": "*",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "laravel/ui": "^4.6",
         "pusher/pusher-php-server": "*",
-        "spatie/laravel-data": "^4.18",
-        "ext-curl": "*",
-        "ext-pdo": "*"
+        "spatie/laravel-data": "^4.18"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
