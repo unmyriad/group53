@@ -1,46 +1,47 @@
-@extends('layouts.app')
+@extends('layouts.app', ['title' => 'Reset Password'])
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+<div class="max-w-md mx-auto">
+    <div class="bg-white dark:bg-[#272e2d] rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        {{-- Header --}}
+        <div class="bg-gradient-to-r from-green-600 to-teal-600 px-8 py-6 text-center">
+            <h1 class="text-2xl font-extrabold text-white tracking-tight">Forgot your password?</h1>
+            <p class="text-green-100 text-sm mt-1">Enter your email and we'll send a reset link</p>
+        </div>
 
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
+        {{-- Form --}}
+        <div class="px-8 py-8">
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+            @if (session('status'))
+                <div class="mb-5 px-4 py-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-green-700 dark:text-green-300 text-sm font-medium">
+                    ✓ {{ session('status') }}
                 </div>
-            </div>
+            @endif
+
+            <form method="POST" action="{{ route('password.email') }}" class="space-y-5">
+                @csrf
+
+                {{-- Email --}}
+                <div>
+                    <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="email"
+                        class="w-full px-4 py-2.5 rounded-xl border @error('email') border-red-400 bg-red-50 dark:bg-red-900/20 @else border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800/50 @enderror text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                    @error('email')
+                        <p class="mt-1.5 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                {{-- Submit --}}
+                <button type="submit"
+                    class="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-colors shadow-lg hover:shadow-xl">
+                    Send Reset Link
+                </button>
+
+                <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+                    <a href="{{ route('login') }}" class="text-green-600 dark:text-green-400 hover:underline font-medium">← Back to login</a>
+                </p>
+            </form>
         </div>
     </div>
 </div>

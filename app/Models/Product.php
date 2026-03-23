@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Product
- * 
+ *
  * @property int $product_id
  * @property int $category_id
  * @property string $product_name
@@ -27,11 +27,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string $pet_type
  * @property Carbon $date_added
  * @property bool|null $is_active
- * 
+ *
  * @property Category $category
  * @property Collection|Review[] $reviews
  *
  * @package App\Models
+ */
+/**
+ * Model representing an individual item available for purchase in the store.
  */
 class Product extends Model
 {

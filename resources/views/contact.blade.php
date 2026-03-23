@@ -33,7 +33,7 @@
             }
         }
     </script>
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
 </head>
 <body class="bg-gradient-to-br from-green-50 to-blue-50 dark:bg-[#142624] dark:bg-none min-h-screen text-gray-800 dark:text-gray-100 transition-colors duration-300 flex flex-col">
 
@@ -131,23 +131,32 @@
         </div>
     </div>
 </div>
+<script>
 
+    window.addEventListener("load", () => {
+        Pusher.logToConsole = true;
+
+        Echo.private('stock-channel')
+            .listen('.stock_event', (e) => {
+                //This is a simple test case
+                //Also, do NOT forget to add the dot in front of the name of the event as defined in broadCastAs in the App/Events
+                alert(e.no_of_low_stock);
+                alert(e.no_out_of_stock);
+
+            })
+            .listen('.message_event', (e) => {
+                alert(e.message);
+                alert(e.title);
+        });
+
+    });
+
+</script>
 <!-- FOOTER -->
 @include('partials.footer')
 
 </body>
 
 //this script is here for testing purposes - it should be moved over to the blade on which the real-time change will occur and populated with the appropriate code inside the callback.
-<script>
 
-    window.addEventListener("load", () => {
-        Pusher.logToConsole = true;
-        Echo.private('stock-channel')
-            .listen('.stock_event', (e) => {
-                //This is a simple test case
-                //Also, do NOT forget to add the dot in front of the name of the event as defined in broadCastAs in the App/Events
-                alert(e.amount);
-            });
-    });
-</script>
 </html>

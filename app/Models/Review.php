@@ -12,18 +12,21 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Class Review
- * 
+ *
  * @property int $review_id
  * @property int|null $product_id
  * @property int|null $rating
  * @property string|null $comment
  * @property Carbon|null $review_date
  * @property int $user_id
- * 
+ *
  * @property Product|null $product
  * @property User $user
  *
  * @package App\Models
+ */
+/**
+ * Model representing customer feedback and ratings left on specific products.
  */
 class Review extends Model
 {

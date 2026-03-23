@@ -2,31 +2,40 @@
 
 namespace App\Events;
 
+use App\Models\AdminMessage;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Events\ShouldDispatchAfterCommit;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class StockEvent implements ShouldBroadcast
+class StockEvent implements ShouldBroadcast,ShouldDispatchAfterCommit
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
      * Create a new event instance.
      */
-    public int $stock_quantity;
-    public function __construct(int $stock_quantity)
+    public int $no_of_low_stock;
+    public int $no_out_of_stock;
+
+
+    public function __construct(int $no_of_low_stock, int $no_out_of_stock)
     {
         //
-        $this->stock_quantity = $stock_quantity;
+        $this->no_of_low_stock = $no_of_low_stock;
+        $this->no_out_of_stock = $no_out_of_stock;
+
     }
     public function broadcastWith():array
     {
         return [
-            'amount' => $this->stock_quantity,
+            'no_of_low_stock' => $this->no_of_low_stock,
+            'no_out_of_stock' => $this->no_out_of_stock,
+
         ];
     }
     public function broadcastAs():string

@@ -8,6 +8,8 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -15,7 +17,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use App\enums\UserRole;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Validation\Rules\Enum;
 
@@ -34,9 +36,14 @@ use Illuminate\Validation\Rules\Enum;
  * @property Collection|Review[] $reviews
  * @package App\Models
  */
+/**
+ * Model representing a registered user, managing their profile data and authentication.
+ */
+use Laravel\Cashier\Billable;
+
 class User extends Authenticatable implements MustVerifyEmail
 {
-	use HasFactory, Notifiable;
+	use HasFactory, Notifiable, Billable;
 	protected $table = 'users';
 	protected $primaryKey = 'user_id';
 
@@ -53,6 +60,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'role'
     ];
 /**
      * The attributes that should be hidden for serialization.
@@ -80,26 +88,38 @@ class User extends Authenticatable implements MustVerifyEmail
 
 	public function reviews():HasMany
 	{
-		return $this->hasMany(Review::class, 'user_id', 'user_id');
+
+		return $this->hasMany(Review::class, "user_id", "user_id");
 	}
     public function contactMessages():HasMany
 	{
-		return $this->hasMany(ContactMessage::class, 'user_id', 'user_id');
+		return $this->hasMany(ContactMessage::class, "user_id", "user_id");
+
+
 	}
-    public function addresses():HasMany
+
+    public function addresses():HasOne
 	{
-		return $this->hasMany(Address::class, 'user_id', 'user_id');
+
+		return $this->hasOne(Address::class, "user_id", "user_id");
 	}
     public function orders():HasMany
 	{
-		return $this->hasMany(Order::class, 'user_id', 'user_id');
+		return $this->hasMany(Order::class, "user_id", "user_id");
+
+
 	}
-    public function cart():HasMany
+
+    public function cart():HasOne
 	{
-		return $this->hasMany(Cart::class, 'user_id', 'user_id');
+
+		return $this->hasOne(Cart::class, "user_id", "user_id");
 	}
     public function returnRequests():HasMany
 	{
-		return $this->hasMany(ReturnRequest::class, 'user_id', 'user_id');
+		return $this->hasMany(ReturnRequest::class, "user_id", "user_id");
+
+
 	}
+
 }

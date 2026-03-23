@@ -13,11 +13,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Category
- * 
+ *
  * @property int $category_id
  * @property string|null $category_name
  * @property string|null $description
- * 
+ *
  * @property Collection|Product[] $products
  *
  * @package App\Models
@@ -41,6 +41,6 @@ class Category extends Model
 
 	public function products():HasMany
 	{
-		return $this->hasMany(Product::class);
+		return $this->hasMany(Product::class, 'category_id', 'category_id');
 	}
 }
