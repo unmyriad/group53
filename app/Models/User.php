@@ -39,9 +39,11 @@ use Illuminate\Validation\Rules\Enum;
 /**
  * Model representing a registered user, managing their profile data and authentication.
  */
+use Laravel\Cashier\Billable;
+
 class User extends Authenticatable implements MustVerifyEmail
 {
-	use HasFactory, Notifiable;
+	use HasFactory, Notifiable, Billable;
 	protected $table = 'users';
 	protected $primaryKey = 'user_id';
 
