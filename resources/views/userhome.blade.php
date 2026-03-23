@@ -50,7 +50,7 @@
             <div class="flex items-center justify-between mb-6">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Dashboard</h1>
-                    <p class="text-gray-600 dark:text-gray-400">Welcome back to YouZoo!</p>
+                    <p class="text-gray-600 dark:text-gray-400">Welcome back to YouZoo {{ Auth::user()->name }} {{ Auth::user()->last_name }}! </p>
                 </div>
                 <div class="flex items-center space-x-2">
                     <span class="relative flex h-3 w-3">
