@@ -14,9 +14,12 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use Illuminate\Http\Request;
 
 Route::get('/', [ProductController::class, 'home'])->name('home');
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
@@ -30,7 +33,9 @@ Route::middleware(['auth','verified'])->group(function () {
     Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
     Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
     Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
-    Route::post('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+    Route::post('/cart/checkout', [CheckoutController::class, 'checkout'])->name('cart.checkout');
+    Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/cancel', [CheckoutController::class, 'cancel'])->name('checkout.cancel');
     // Review Routes
     Route::post('/products/{id}/reviews', [App\Http\Controllers\ReviewController::class, 'store'])->name('reviews.store');
     Route::put('/reviews/{review}', [App\Http\Controllers\ReviewController::class, 'update'])->name('reviews.update');
@@ -105,13 +110,7 @@ Route::get('/test-event', function () {
 
     return 'Event dispatched!';
 });
-Route::get("test/route/{id}", function ($id)
-{
-   $order = Order::findOrFail($id);
-   $user = $order->user;
 
-   return "the name of the user is: ".$user->name;
-});
 
 
 //Admin routes

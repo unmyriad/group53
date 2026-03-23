@@ -8,7 +8,7 @@
             <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
                 Admin <span class="text-green-600 dark:text-green-400">Dashboard</span>
             </h1>
-            <p class="text-gray-500 dark:text-gray-400 mt-1 font-medium">Welcome back, YouZoo Administrator.</p>
+            <p class="text-gray-500 dark:text-gray-400 mt-1 font-medium">Welcome back, {{ Auth::user()->name }} </p>
         </div>
         <div>
             <div class="px-4 py-2 bg-white dark:bg-[#272e2d] rounded-full border border-gray-200 dark:border-gray-700 shadow-sm inline-flex items-center">
