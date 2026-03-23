@@ -2,7 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\OrderStatus;
+use App\enums\OrderStatus;
+
+use App\enums\UserRole;
+use App\Events\DashboardEvent;
+use App\Events\MessageEvent;
+use App\Events\StockEvent;
+use App\Mail\RefundMail;
+use App\Models\AdminMessage;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Cart;
@@ -13,17 +21,43 @@ use App\Models\InventoryTransaction;
 use App\Models\Product;
 use App\Models\Address;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\Rule;
+use Throwable;
 
+/**
+ * Controller managing order placements, tracking, and updating order fulfillment statuses.
+ */
 class OrderController extends Controller
 {
-    //Returns all pending orders; to be used by
-    public function getAllPendingOrders(){
-        if (!Auth::check()) {
-            return redirect()->route('login')->with('error', 'Please login to view your cart');
+    //Returns all pending orders; to be used by Admin
+    public function getAllOrders(Request $request){
+
+        $query = Order::query()->with(["user", "address","order_items"]);
+        if($request->filled('product_search')){
+            $search = $request->input('product_search');
+            $query->whereHas('order_items.product', function($q) use ($search){
+                $q->where('product_name', 'LIKE', "%{$search}%")->
+                orWhere('brand', 'LIKE', "%{$search}%");
+            });
+
+        }
+        if($request->filled('user_search'))
+        {
+            $search = $request->input('user_search');
+            $query->whereHas("user", function($q) use ($search){
+                $q->where('name', 'LIKE', "%{$search}%");
+            });
+        }
+        if($request->filled('status')){
+            $status = $request->input('status');
+            $query->where("status", '=', $status);
         }
 
-        $orders = DB::table("orders")->where("status", "=",OrderStatus::Pending)->get();
-        return view('orders.pending', compact("orders"));
+
+
+        $orders = $query->paginate(12);
+        return view('admin.orders.index', compact("orders"));
 
     }
 
@@ -32,6 +66,7 @@ class OrderController extends Controller
             return redirect()->route('login')->with('error', 'Please login to view your cart');
         }
         DB::table("orders")->where("status", "=",OrderStatus::Pending)->update(["status"=>OrderStatus::Shipped]);
+        return redirect()->route('orders.index')->with('success', 'All pending orders have been shipped');
     }
 
     public function processAllShippedOrdersAsDelivered()
@@ -40,104 +75,137 @@ class OrderController extends Controller
             return redirect()->route('login')->with('error', 'Please login to view your cart');
         }
         DB::table("orders")->where("status", "=",OrderStatus::Shipped)->update(["status"=>OrderStatus::Delivered]);
+        return redirect()->route('orders.index')->with('success', 'All shipped orders have been delivered');
+
     }
 
+    public function open_process_order($id){
+        $order = Order::findOrFail($id);
+        if(DB::table("orders")->where("order_id","=",$order->order_id)->exists()){
+            return view("admin.orders.edit", compact("order"));
+        }
+        else
+            return redirect()->route('orders.index')->with('error', 'Order not found');
 
-    /*
-    public function placeOrder(Request $request)
-    {
+    }
+
+    public function process_order(Request $request){
+
         $request->validate([
-            'name'           => 'required|string|max:255',
-            'email'          => 'required|email',
-            'phone'          => 'required|string|max:20',
-            'address_line'    => 'required|string|max:255',
-            'city'           => 'required|string|max:100',
-            'postcode'       => 'required|string|max:20',
-            'country'        => 'required|string|max:100',
-            'payment_method' => 'required|in:credit_card,debit_card,paypal,cash_on_delivery'
+           "status" => ["required",Rule::enum(OrderStatus::class)]
         ]);
 
-        $user    = Auth::user();
-        $userId  = $user->user_id;
+            try {
+                DB::transaction(function () use ($request) {
+                    $order = DB::table("orders")->where("order_id","=",$request->input("order_id"))->lockForUpdate()->first();
+                    if($request->input("status") !== OrderStatus::Pending->value && $order->status === OrderStatus::Pending->value) {
+                        DB::table("orders")->where("order_id", "=", $request->input("order_id"))->update([
+                            "status" => $request->input("status")
+                        ]);
 
 
-        $cart = Cart::where('user_id', $userId)->where('status', 'active')->first();
+                        $orderItems = DB::table("order_items")->where("order_id", "=", $order->order_id)->lockForUpdate()->get();
+                        foreach ($orderItems as $orderItem) {
+                           $product = DB::table("products")->where("product_id", "=", $orderItem->product_id)->lockForUpdate()->first();
+                           if($product->stock_quantity < $orderItem->quantity){
+                            DB::table("products")->where("product_id", "=", $orderItem->product_id)->update([
+                                "stock_quantity" => 0
+                            ]);
+                               //communicates the number of products that are completely out of stock to front-end channel
+                               $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
+                               $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
 
-        if (!$cart) {
-            return back()->with('error', 'No active cart has been found!');
-        }
+                               event(new StockEvent($noOfLowStock,$noOutOfStock));
 
-        $cartItems = CartItem::where('cart_id', $cart->cart_id)->with('product')->get();
+                               $amount = $product->price * ($orderItem->quantity - $product->stock_quantity);
+                               $user = User::find($order->user_id);
+                               \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\RefundMail($user,$amount));
+                               $admins = User::where("role","=",UserRole::Admin)->get();
+                               foreach ($admins as $admin) {
+                                   Mail::to($admin->email)->send(new \App\Mail\AdminNotificationEmail($product));
+                               }
 
-        if ($cartItems->isEmpty()) {
-            return back()->with('error', 'Your cart is empty.');
-        }
+                           }
+                           elseif ($product->stock_quantity == $orderItem->quantity) {
+                               DB::table("products")->where("product_id", "=", $orderItem->product_id)->update([
+                                   "stock_quantity" => 0
+                               ]);
+                               //communicates the number of products that are completely out of stock to front-end channel
+                               $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
+                               $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
+
+                               event(new StockEvent($noOfLowStock,$noOutOfStock));
+                               $admins = User::where("role","=",UserRole::Admin)->get();
+                               foreach ($admins as $admin) {
+                                   Mail::to($admin->email)->send(new \App\Mail\AdminNotificationEmail($product));
+                               }
+
+                           }
+                           elseif (($product->stock_quantity - $orderItem->quantity) > 0 && ($product->stock_quantity - $orderItem->quantity) <= 10) {
+                               DB::table("products")->where("product_id", "=", $orderItem->product_id)->update([
+                                   "stock_quantity" => $product->stock_quantity - $orderItem->quantity
+                               ]);
+                               //communicates the number of products that are low stock but not out of stock as part of real-time funcitonality - this figure should be added to the admin page with the table of
+                               //the number of low stock and out of stock products
+                               $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
+                               $noOfLowStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
+
+                               event(new StockEvent($noOfLowStock,$noOutOfStock));
+                               $admins = User::where("role","=",UserRole::Admin)->get();
+                               foreach ($admins as $admin) {
+                                   Mail::to($admin->email)->send(new \App\Mail\AdminNotificationEmail($product));
+                               }
+
+                           }
+                           else
+                           {
+                               DB::table("products")->where("product_id", "=", $orderItem->product_id)->update([
+                                   "stock_quantity" => $product->stock_quantity - $orderItem->quantity
+                               ]);
+                           }
+                        }
+                        $orderStatus = $order->status;
+                        $newStatus = $request->input("status");
+                        DB::table("orders")->where("order_id","=",$request->input("order_id"))->update([
+                            "status" => $request->input("status")
+                        ]);
+                        if(($newStatus === OrderStatus::Delivered->value && $orderStatus !== OrderStatus::Delivered->value)||($newStatus !== OrderStatus::Delivered->value && $orderStatus === OrderStatus::Delivered->value)){
+                            $event = new DashboardEvent();
+                            $event->orderCount = Order::where("status","!=",OrderStatus::Delivered)->count();
+                            event($event);
+                        }
+
+                    }
+                    elseif($request->input("status") !== OrderStatus::Pending->value && $order->status !== OrderStatus::Pending->value)
+                    {
+                        $orderStatus = $order->status;
+                        $newStatus = $request->input("status");
+                        DB::table("orders")->where("order_id","=",$request->input("order_id"))->update([
+                            "status" => $request->input("status")
+                        ]);
+                        if(($newStatus === OrderStatus::Delivered->value && $orderStatus !== OrderStatus::Delivered->value)||($newStatus !== OrderStatus::Delivered->value && $orderStatus === OrderStatus::Delivered->value)){
+                            $event = new DashboardEvent();
+                            $event->orderCount = Order::where("status","!=",OrderStatus::Delivered)->count();
+                            event($event);
+                        }
+
+                    }
 
 
-        $address = Address::firstOrCreate([
-            'user_id'      => $userId,
-            'adress_line'  => $request->adress_line,
-            'city'         => $request->city,
-            'postcode'     => $request->postcode,
-            'country'      => $request->country,
-        ]);
 
+                });
 
-        $totalPrice = $cartItems->sum('subtotal');
+                return redirect()->route('orders.index')->with('success', 'Order status has been updated');
+            } catch (Throwable $e) {
 
-        $order = Order::create([
-            'user_id'        => $userId,
-            'address_id'     => $address->address_id,
-
-            'total_price'    => $totalPrice,
-            'status'         => 'pending',
-            'payment_method' => $request->payment_method,
-            'payment_status' => 'pending'
-        ]);
-
-        foreach ($cartItems as $item) {
-            $product = $item->product;
-
-
-
-            if ($product->stock_quantity < $item->quantity) {
-                return back()->with('error', "Not enough stock for {$product->product_name}.");
+                return redirect()->route("orders.index")->with('error', "sorry an error occurred whilst processing your request.");
             }
 
-            $product->stock_quantity -= $item->quantity;
-
-            if ($product->stock_quantity <= 0) {
-                $product->stock_status = 'out_of_stock';
-            } elseif ($product->stock_quantity <= $product->low_stock_threshold) {
-                $product->stock_status = 'low_stock';
-            }
-
-            $product->save();
-
-            OrderItem::create([
-                'order_id'          => $order->order_id,
-                'product_id'        => $product->product_id,
-                'quantity'          => $item->quantity,
-                'price_at_purchase' => $product->price,
-            ]);
-
-            InventoryTransaction::create([
-                'product_id'      => $product->product_id,
-                'order_id'        => $order->order_id,
-                'user_id'         => $userId,
-                'quantity_change' => -$item->quantity,
-                'type'            => 'out',
-                'note'            => 'Order placed',
-            ]);
-        }
-
-        $cart->status = 'converted';
-        $cart->save();
-
-        CartItem::where('cart_id', $cart->cart_id)->delete();
 
 
-        return redirect()->route('getHomepage')->with('success', 'Order has been successfully placed!');
     }
-    */
+
+
+
+
 }

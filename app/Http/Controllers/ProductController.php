@@ -1,13 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Events\MessageEvent;
+use App\Events\StockEvent;
+use App\Events\TransactionEvent;
+use App\Models\AdminMessage;
+use App\Models\Category;
+use App\Models\InventoryTransaction;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+/**
+ * Controller that handles displaying product listings, filtering, and individual product details.
+ */
 class ProductController extends Controller
 {
     /**
@@ -73,9 +83,9 @@ class ProductController extends Controller
         return view("shoplisting", compact('products', 'categories', 'petTypes'));
     }
 
-   
 
-   
+
+
 
     /**
      * Display the specified resource.
@@ -89,7 +99,7 @@ class ProductController extends Controller
 
 
 
-    
+
     public function show($id)
     {
         $product = Product::with('reviews.user')->findOrFail($id);
@@ -101,5 +111,114 @@ class ProductController extends Controller
         $featuredProducts = Product::where('is_active', 1)->inRandomOrder()->take(6)->get();
         $categories = \App\Models\Category::all();
         return view('homepage', compact('featuredProducts', 'categories'));
+    }
+
+
+    //admin functionality goes here
+
+    public function index_admin(Request $request){
+        $query = Product::query()->with("category");
+
+        if($request->filled('search')){
+            $search = $request->input('search');
+           $query->where("product_name", "like", "%{$search}%")
+           ->orWhere("brand", "like", "%{$search}%");
+        }
+        if($request->filled('category')){
+          $query->where("category_id","=", request()->input('category'));
+        }
+        if($request->filled("stock_status"))
+        {
+            if($request->input('stock_status') === "low")
+            {
+                $query->whereBetween("stock_quantity",[1,10]);
+            }
+            elseif($request->input('stock_status') === "out")
+            {
+                $query->where("stock_quantity","=",0);
+            }
+        }
+
+        $products = $query->paginate(15);
+        $categories = Category::all();
+
+
+        return view("admin.inventory.index", compact('products','categories'));
+    }
+
+    public function edit_product($id){
+        try {
+            $product = Product::findOrFail($id);
+            return view("admin.inventory.edit", compact('product'));
+        }
+        catch (\Exception $exception){
+
+            return redirect()->route("allInventory")->with("error", "an error occurred during processing");
+        }
+    }
+    public function update_product(Request $request, $id){
+
+
+        try {
+            DB::transaction(function () use ($id, $request) {
+                $product = Product::lockForUpdate()->findOrFail($id);
+
+                    $validated = $request->validate([
+                        'product_name' => 'required|string|max:150',
+                        'category_id' => 'required|exists:categories,category_id',
+                        'description' => 'nullable|string',
+                        'price' => 'required|numeric|min:0',
+                        'stock_quantity' => 'required|int|min:0',
+                        'brand' => 'nullable|string|max:100',
+                        'pet_type' => 'nullable|string|max:60',
+                        'image_url' => 'nullable|url',
+                        'is_active' => 'boolean',
+                    ]);
+
+                    $oldStock = $product->stock_quantity;
+                    $newStock = (int)$request->input('stock_quantity');
+
+                    $product->update($validated);
+
+                    if($oldStock != $newStock){
+                        $transaction=InventoryTransaction::create([
+                            'product_id' => $product->product_id,
+                            'user_id' => Auth::id(),
+                            'quantity_change' => $newStock - $oldStock,
+                            'type' => 'adjustment',
+                            'note' => 'Manual stock update',
+                        ]);
+                        event(new TransactionEvent(InventoryTransaction::findOrFail($transaction->transaction_id)));
+                    }
+                \Log::info("we have reached the second if");
+                    if($newStock == 0 && $oldStock != 0){
+                        \Log::info("About to dispatch StockEvent");
+                        $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
+                        $noOfLowStock = DB::table("products")->where('stock_quantity', '<=', 10)->where('stock_quantity', '>', 0)->count();
+                        event(new StockEvent($noOfLowStock,$noOutOfStock));
+                    }
+                    elseif ($newStock <= 10 && $oldStock > 10){
+                        \Log::info("About to dispatch StockEvent");
+                        $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
+                        $noOfLowStock = DB::table("products")->where('stock_quantity', '<=', 10)->where('stock_quantity', '>', 0)->count();
+                        event(new StockEvent($noOfLowStock,$noOutOfStock));
+                    }
+                    elseif($newStock > 10 && $oldStock <= 10){
+                        \Log::info("About to dispatch StockEvent");
+                        $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
+                        $noOfLowStock = DB::table("products")->where('stock_quantity', '<=', 10)->where('stock_quantity', '>', 0)->count();
+                        event(new StockEvent($noOfLowStock,$noOutOfStock));
+                    }
+
+
+
+
+
+            });
+            return redirect()->route("admin.inventory.index")->with('success', "successfully updated product");
+        } catch (\Throwable $e) {
+            return redirect()->route("admin.inventory.index")->with("error", "sorry an error occurred");
+        }
+
     }
 }

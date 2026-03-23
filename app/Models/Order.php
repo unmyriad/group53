@@ -18,6 +18,8 @@ use Illuminate\Validation\Rules\Enum;
 /**
  * Class Order
  *
+ * Represents a customer's order in the system, storing details like total price, status, payment state, and associated user/address.
+ *
  * @property int $order_id
  * @property int $user_id
  * @property int $address_id
@@ -27,7 +29,6 @@ use Illuminate\Validation\Rules\Enum;
  * @property string $payment_method
  * @property string|null $payment_status
  * @property string|null $tracking_number
- *
  * @property User $user
  * @property Address $address
  * @property Collection|InventoryTransaction[] $inventory_transactions
@@ -41,6 +42,9 @@ class Order extends Model
 	protected $primaryKey = 'order_id';
 	public $timestamps = false;
 
+    /**
+     * Define custom type casting for model attributes.
+     */
     protected function casts(): array
     {
         return [
@@ -62,23 +66,50 @@ class Order extends Model
 		'tracking_number'
 	];
 
+	/**
+	 * Get the user who placed this order.
+	 */
 	public function user():BelongsTo
 	{
-		return $this->belongsTo(User::class, 'user_id', 'user_id');
+
+		return $this->belongsTo(User::class,"user_id","user_id");
+
+
+
 	}
 
+	/**
+	 * Get the delivery address associated with this order.
+	 */
 	public function address():BelongsTo
 	{
-		return $this->belongsTo(Address::class, 'address_id', 'address_id');
+
+		return $this->belongsTo(Address::class,"address_id","address_id");
+
+
+
 	}
 
+	/**
+	 * Get the inventory transactions (stock deductions/additions) linked to this order.
+	 */
 	public function inventory_transactions():HasMany
 	{
-		return $this->hasMany(InventoryTransaction::class, 'order_id', 'order_id');
+
+		return $this->hasMany(InventoryTransaction::class, "order_id", "order_id");
+
+
 	}
 
+	/**
+	 * Get the individual items purchased within this order.
+	 */
 	public function order_items():HasMany
 	{
-		return $this->hasMany(OrderItem::class, 'order_id', 'order_id');
+
+		return $this->hasMany(OrderItem::class, "order_id", "order_id");
+
+
+
 	}
 }

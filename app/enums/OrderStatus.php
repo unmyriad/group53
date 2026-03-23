@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Enums;
+namespace App\enums;
 
-enum OrderStatus: string
+enum OrderStatus:string
 {
-    case Pending = 'pending';
-    case Packed = 'packed';
-    case Shipped = 'shipped';
-    case Delivered = 'delivered';
+    case Pending = "pending";
+    case Packed = "packed";
+
+    case Shipped = "shipped";
+
+    case Delivered = "delivered";
 }

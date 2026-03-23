@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 
+use App\enums\OrderStatus;
+use App\Events\DashboardEvent;
 use App\Events\StockEvent;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Models\Product; // Assuming Product model exists
-// We need Cart and CartItem models. If they don't exist, I should use DB facade or create them.
-// Let's assume I need to create them as well or check if they exist.
-// User didn't ask to create models, but good practice.
-// I'll check first.
+use App\Models\Product;
 
+/**
+ * Controller responsible for managing user shopping carts, adding/removing items, and checkout processing.
+ */
 class CartController extends Controller
 {
     public function index()
@@ -31,7 +33,7 @@ class CartController extends Controller
             $cartItems = DB::table('cart_items')
                 ->join('products', 'cart_items.product_id', '=', 'products.product_id')
                 ->where('cart_id', $cart->cart_id)
-                ->select('cart_items.*', 'products.product_name', 'products.price', 'products.image_url', 'products.description')
+                ->select('cart_items.*', 'products.product_name', 'products.price', 'products.image_url', 'products.description')->lockForUpdate()
                 ->get();
 
             $total = $cart->total_amount;
@@ -151,107 +153,12 @@ class CartController extends Controller
 
     public function checkout()
     {
-        if (!Auth::check()) {
-            return redirect()->route('login');
-        }
-
-        $userId = Auth::id();
-        $cart = DB::table('carts')->where('user_id', $userId)->first();
-
-        if (!$cart || $cart->total_amount <= 0) {
-            return redirect()->route('cart.index')->with('error', 'Your cart is empty.');
-        }
-
-        $cartItems = DB::table('cart_items')->where('cart_id', $cart->cart_id)->get();
-
-        if ($cartItems->isEmpty()) {
-            return redirect()->route('cart.index')->with('error', 'Your cart is empty.');
-        }
-
-        // Handle Address (Dummy logic for now)
-        $address = DB::table('addresses')->where('user_id', $userId)->first();
-        if (!$address) {
-            // Create dummy address for the user if none exists
-            $addressId = DB::table('addresses')->insertGetId([
-                'user_id' => $userId,
-                'address_line' => '123 Dummy St',
-                'city' => 'London',
-                'postal_code' => 'SW1A 1AA',
-                'country' => 'UK',
-                'is_default' => 1
-            ]);
-        } else {
-            $addressId = $address->address_id;
-        }
-
-        // Create Order
-        $orderId = DB::table('orders')->insertGetId([
-            'user_id' => $userId,
-            'address_id' => $addressId,
-            'order_date' => now(),
-            'total_price' => $cart->total_amount,
-            'status' => 'pending',
-            'payment_method' => 'Credit Card (Dummy)'
-        ]);
-
-        // Move Cart Items to Order Items
-        foreach ($cartItems as $item) {
-            $product = DB::table('products')->where('product_id', $item->product_id)->first();
-
-            DB::table('order_items')->insert([
-                'order_id' => $orderId,
-                'product_id' => $item->product_id,
-                'quantity' => $item->quantity,
-                'price_at_purchase' => $product->price
-            ]);
-
-            // Update Stock ? (Optional, but good for "realism")
-            // DB::table('products')->where('product_id', $item->product_id)->decrement('stock_quantity', $item->quantity);
-            if($product -> stock_quantity <= $item->quantity) {
-
-                DB::table('products')
-                    ->where('product_id', $item->product_id)
-                    ->update([
-                        'stock_quantity' => 0
-
-                    ]);
-                //communicates the number of products that are completely out of stock to front-end channels
-                $noOutOfStock = DB::table('products')->where("stock_quantity", "=", 0)->count();
-                event(new StockEvent($noOutOfStock));
-            }
-            else if((($product -> stock_quantity - $item->quantity) <= 10) && (($product -> stock_quantity - $item->quantity) > 0)) {
-                DB::table('products')
-                    ->where('product_id', $item->product_id)
-                    ->update([
-                        'stock_quantity' => ($product -> stock_quantity - $item->quantity),
-
-                    ]);
-                //communicates the number of products that are low stock but not out of stock as part of real-time funcitonality - this figure should be added to the admin page with the table of
-                //the number of low stock and out of stock products
-                $noOutOfStock = DB::table('products')->whereBetween('stock_quantity', [1, 10])->count();
-                event(new StockEvent($noOutOfStock));
-            }
-            else {
-                $newQuantity = $product->stock_quantity - $item->quantity;
-                DB::table('products')
-                    ->where('product_id', $item->product_id)
-                    ->update([
-                        'stock_quantity' => $newQuantity,
-
-                    ]);
-            }
-            }
-
-
-        // Clear Cart
-        DB::table('cart_items')->where('cart_id', $cart->cart_id)->delete();
-        DB::table('carts')->where('cart_id', $cart->cart_id)->update(['total_amount' => 0]);
-
-        return redirect()->route('cart.index')->with('success', 'Order placed successfully! Order ID: #' . $orderId);
+        return redirect()->route('cart.checkout');
     }
 
     private function recalculateCartTotal($cartId)
     {
+
         $total = DB::table('cart_items')->where('cart_id', $cartId)->sum('subtotal');
         DB::table('carts')->where('cart_id', $cartId)->update(['total_amount' => $total]);
     }

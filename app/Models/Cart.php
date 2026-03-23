@@ -10,20 +10,25 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Class Cart
- * 
+ *
  * @property int $cart_id
  * @property int $user_id
  * @property Carbon $date_created
  * @property float|null $total_amount
  * @property string|null $status
- * 
+ *
  * @property User $user
  * @property Collection|CartItem[] $cart_items
  *
  * @package App\Models
+ */
+/**
+ * Model representing a user's active shopping cart session and its total amount.
  */
 class Cart extends Model
 {
@@ -47,11 +52,11 @@ class Cart extends Model
 
 	public function user():BelongsTo
 	{
-		return $this->belongsTo(User::class);
+		return $this->belongsTo(User::class, 'user_id', 'user_id');
 	}
 
 	public function cart_items():HasMany
 	{
-		return $this->hasMany(CartItem::class);
+		return $this->hasMany(CartItem::class, 'cart_id', 'cart_id');
 	}
 }
