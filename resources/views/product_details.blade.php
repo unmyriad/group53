@@ -33,12 +33,7 @@
         </script>
         
         <!-- Assuming these are still needed or we can drop them if we move to tailwind completely -->
-        {{-- @vite(['resources/css/app.css','resources/css/product_details.css','resources/js/product_details.js']) --}} 
-        <!-- Commenting out vite assets to rely on CDN tailwind for consistency with other pages for now, 
-             unless the user explicitly wanted to keep the custom JS/CSS. 
-             The JS seems to handle reviews/stars. I'll include the JS logic for reviews if requested later, 
-             but for now focusing on structure and data. 
-        -->
+
     </head>
     <body class="bg-gradient-to-br from-green-50 to-blue-50 dark:bg-[#142624] dark:bg-none min-h-screen text-gray-800 dark:text-gray-100 transition-colors duration-300">
 
