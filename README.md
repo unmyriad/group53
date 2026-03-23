@@ -77,6 +77,18 @@ To access the platform immediately for testing purposes, use the following crede
 
 *(Note: The default password for seeded users in Laravel factories is typically 'password' unless changed in the factory definition.)*
 
+## Test Stripe Checkout
+To test the Stripe checkout without using real money or cards, you can use this test card provide by Stripe (mmore information [here](https://docs.stripe.com/testing?locale=en-GB)
+
+|Brand | Card Number | CVC       | DATE |
+|:--- | :---  | :---               | :---     |
+| Visa | **4242424242424242** | **Any 3 Digits** | **Any Future Date** |
+| Mastercard | **5555555555554444** | **Any 3 Digits** | **Any Future Date** |
+| American Express | **378282246310005** | **Any 4 Digits** | **Any Future Date** |
+| Diners Club | **3056930009020004** | **Any 3 Digits** | **Any Future Date** |
+
+
+
 ## Project Structure
 
 -   `app/Http/Controllers`: Contains application logic (ProductController, CartController, etc.).
