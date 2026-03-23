@@ -47,7 +47,7 @@
             <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Order Information</h3>
             <p class="text-gray-700 dark:text-gray-300 mt-2"><strong>User Name:</strong> {{ $order->user->name }}</p>
             <p class="text-gray-700 dark:text-gray-300 mt-2"><strong>Total Amount:</strong>
-                ${{ number_format($order->total_price, 2) }}</p>
+                £{{ number_format($order->total_price, 2) }}</p>
             <p class="text-gray-700 dark:text-gray-300 mt-2"><strong>Order
                     Date:</strong> {{ $order->order_date->format('M d, Y') }}</p>
             <p class="text-gray-700 dark:text-gray-300 mt-2"><strong>Shipping

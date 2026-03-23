@@ -115,7 +115,7 @@
                                 <td class="py-4 px-2 font-medium text-gray-900 dark:text-white">{{ $order->user->name }}</td>
                                 <td class="py-4 px-2 text-sm text-gray-600 dark:text-gray-300">{{ $order->status }}</td>
                                 <td class="py-4 px-2 font-bold text-gray-900 dark:text-white">
-                                    ${{ number_format($order->total_price, 2) }}</td>
+                                    £{{ number_format($order->total_price, 2) }}</td>
                                 <td class="py-4 px-2">{{ $order->order_date->format('M d, Y') }}</td>
                                 <td class="py-4 px-2 text-right space-x-2">
                                     <a href="{{ route('orders.edit', $order->order_id) }}"
