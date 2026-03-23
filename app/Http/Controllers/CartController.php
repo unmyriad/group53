@@ -153,78 +153,7 @@ class CartController extends Controller
 
     public function checkout()
     {
-        if (!Auth::check()) {
-            return redirect()->route('login');
-        }
-
-        $userId = Auth::id();
-        $cart = DB::table('carts')->where('user_id', $userId)->first();
-
-        if (!$cart || $cart->total_amount <= 0) {
-            return redirect()->route('cart.index')->with('error', 'Your cart is empty.');
-        }
-
-        $cartItems = DB::table('cart_items')->where('cart_id', $cart->cart_id)->get();
-
-        if ($cartItems->isEmpty()) {
-            return redirect()->route('cart.index')->with('error', 'Your cart is empty.');
-        }
-
-        // Handle Address (Dummy logic for now)
-        $address = DB::table('addresses')->where('user_id', $userId)->first();
-        if (!$address) {
-            // Create dummy address for the user if none exists
-            $addressId = DB::table('addresses')->insertGetId([
-                'user_id' => $userId,
-                'address_line' => '123 Dummy St',
-                'city' => 'London',
-                'postal_code' => 'SW1A 1AA',
-                'country' => 'UK',
-                'is_default' => 1
-            ]);
-        } else {
-            $addressId = $address->address_id;
-        }
-
-        // Create Order
-        $orderId = DB::table('orders')->insertGetId([
-            'user_id' => $userId,
-            'address_id' => $addressId,
-            'order_date' => now(),
-            'total_price' => $cart->total_amount,
-            'status' => 'pending',
-            'payment_method' => 'Credit Card (Dummy)'
-        ]);
-        try {
-            DB::transaction(function () use ($orderId, $cartItems) {
-                // Move Cart Items to Order Items
-                foreach ($cartItems as $item) {
-
-                    $product = DB::table('products')->where('product_id', $item->product_id)->lockForUpdate()->first();
-                    DB::table('order_items')->insert([
-                        'order_id' => $orderId,
-                        'product_id' => $item->product_id,
-                        'quantity' => $item->quantity,
-                        'price_at_purchase' => $product->price
-                    ]);
-
-                    // Update Stock ? (Optional, but good for "realism")
-                    // DB::table('products')->where('product_id', $item->product_id)->decrement('stock_quantity', $item->quantity);
-
-                }
-            });
-        } catch (\Throwable $e) {
-            return redirect()->route('cart.index')->with('error', "sorry an error occurred whilst processing your request.");
-        }
-
-        $event = new DashboardEvent();
-        $event->orderCount = Order::where("status","!=",OrderStatus::Delivered)->count();
-        event($event);
-        // Clear Cart
-        DB::table('cart_items')->where('cart_id', $cart->cart_id)->delete();
-        DB::table('carts')->where('cart_id', $cart->cart_id)->update(['total_amount' => 0]);
-
-        return redirect()->route('cart.index')->with('success', 'Order placed successfully! Order ID: #' . $orderId);
+        return redirect()->route('cart.checkout');
     }
 
     private function recalculateCartTotal($cartId)
